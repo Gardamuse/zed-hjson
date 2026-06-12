@@ -2,7 +2,7 @@ name = "HJSON"
 grammar = "json"
 path_suffixes = ["hjson"]
 line_comments = ["# ", "// "]
-block_comment = { start = "/*", end = "*/" }
+block_comment = ["/*", "*/"]
 
 [formatter]
 external = { command = "hjson", arguments = ["-"] }
