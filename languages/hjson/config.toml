@@ -4,6 +4,3 @@ path_suffixes = ["hjson"]
 line_comments = ["# ", "// "]
 block_comment = ["/*", "*/"]
 
-[formatter]
-external = { command = "hjson", arguments = ["-"] }
-

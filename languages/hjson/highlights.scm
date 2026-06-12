@@ -4,6 +4,10 @@
 
 ; String values
 (string) @string
+(multiline_string) @string
+(pair value: (unquoted_string) @string)
+(array (unquoted_string) @string)
+(document (unquoted_string) @string)
 
 ; Numbers
 (number) @number

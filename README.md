@@ -25,6 +25,26 @@ Search for **HJSON** in Zed's extension panel (`zed: extensions`) and install it
 
 Files with the `.hjson` extension are automatically detected. Use `editor: format` (`Alt+Shift+F` / `Option+Shift+F`) to format the current file.
 
+### Auto-format on save
+
+To enable auto-formatting on save, add the following to your Zed `settings.json` (`zed: open settings`):
+
+```json
+{
+  "languages": {
+    "HJSON": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "hjson",
+          "arguments": ["-sl"]
+        }
+      }
+    }
+  }
+}
+```
+
 ## Grammar
 
 This extension uses the [tree-sitter-json](https://github.com/tree-sitter/tree-sitter-json) grammar. Since HJSON is a superset of JSON, the JSON grammar covers the structural syntax. HJSON-specific features (comments, multiline strings, unquoted keys) are handled at the tokenizer level by the grammar's comment nodes.
