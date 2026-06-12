@@ -1,9 +1,9 @@
 id = "hjson"
 name = "HJSON"
 description = "HJSON language support for Zed (syntax highlighting and formatting)."
-version = "0.1.0"
+version = "1.0.0"
 schema_version = 1
-authors = ["Zed HJSON Extension"]
+authors = ["Gardamuse <gardamuse@blushingdefeat.com>"]
 repository = "https://github.com/zed-extensions/hjson"
 
 [grammars.json]
