@@ -130,6 +130,8 @@ If you're upgrading from an older build that used the plain JSON grammar (or the
 
 **Note:** Fixed `Failed to install dev extension: failed to compile grammar 'hjson'` after moving the grammar to its own repository (`hjson-tree-sitter`). When installed as a dev extension, Zed checks out the grammar directly into this project's own `grammars/hjson/` directory; that directory was left over from the previous `[grammars.hjson]` `repository` value (the old `hjson-grammar` branch of `zed-hjson` itself), and Zed refuses to reuse an existing grammar directory that isn't a git clone of the *current* `repository` URL, causing the compile step to fail outright. The stale `grammars/hjson/` (and `grammars/hjson.wasm`) directory has been removed, and a `.gitignore` was added for `/grammars`, `/extension.wasm`, and `/target` so these local build artifacts never get committed or become stale again. If you hit this error, delete the `grammars/hjson` directory (and `grammars/hjson.wasm`, if present) in this project, then reinstall/rebuild the dev extension in Zed.
 
+The commit currently pinned in `extension.toml` (`78af1b721db4c090cceef7f8f8b8f83faf2cab92`) has been tagged as [`v1.0`](https://github.com/Gardamuse/hjson-tree-sitter/releases/tag/v1.0) in the `hjson-tree-sitter` repository, guaranteeing that commit stays reachable even if `main` is later force-pushed.
+
 ## License
 
 MIT
