@@ -1,0 +1,57 @@
+# Sample Hjson fixture used by server/test.js to exercise the bundled
+# parser and formatter against a realistic file combining many different
+# Hjson features at once.
+
+[
+  {
+    name: Test Project
+    display name: My Cool Project // trailing line comment
+    version: 1.0.0
+    enabled: true
+    disabled: false
+    missing: null
+
+    count: 42
+    negative: -7
+    pi: 3.14159
+    exp: 1.5e3
+
+    /*
+    * A block comment describing the "server" section below.
+    */
+    server: {
+      host: localhost
+      port: 8080
+      "quoted key": value
+      nested flag: true
+    }
+
+    list: [1, 2, 3, "four", five]
+
+    empty object: {}
+    empty array: []
+
+    description:
+      '''
+      This is a multiline
+      string value that spans
+      several lines.
+      '''
+
+    quoted: "a string with \"escapes\" and a\ttab"
+
+    realNewline: "A quoted string with a
+    real newline in it"
+
+    realNewline2: "A quoted string with two
+
+    real newlines in it"
+
+    unquotedStringWithNewline: An unquoted string with
+    a newline in it.
+
+    unquotedStringWithNewline2: An unquoted string with
+
+    two newlines in it.
+  }
+]

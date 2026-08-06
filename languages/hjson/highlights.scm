@@ -28,4 +28,4 @@
 ; Structural punctuation
 ["{" "}"] @punctuation.bracket
 ["[" "]"] @punctuation.bracket
-["," ":"] @punctuation.delimiter
+[":"] @punctuation.delimiter

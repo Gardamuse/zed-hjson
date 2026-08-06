@@ -6,7 +6,11 @@ schema_version = 1
 authors = ["Gardamuse <gardamuse@blushingdefeat.com>"]
 repository = "https://github.com/zed-extensions/hjson"
 
-[grammars.json]
-repository = "https://github.com/tree-sitter/tree-sitter-json"
-rev = "001c28d7a29832b06b0e831ec77845553c89b56d"
+[grammars.hjson]
+repository = "https://github.com/Gardamuse/hjson-tree-sitter"
+rev = "78af1b721db4c090cceef7f8f8b8f83faf2cab92"
+
+[language_servers.hjson-language-server]
+name = "HJSON Formatter"
+languages = ["HJSON"]
 

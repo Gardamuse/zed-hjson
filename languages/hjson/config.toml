@@ -1,5 +1,5 @@
 name = "HJSON"
-grammar = "json"
+grammar = "hjson"
 path_suffixes = ["hjson"]
 line_comments = ["# ", "// "]
 block_comment = ["/*", "*/"]
